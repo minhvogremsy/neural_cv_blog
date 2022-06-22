@@ -1,0 +1,9 @@
+.vs/
+out/
+CMakeSettings.json
+*.mp4
+*.avi
+*.onnx
+*.trt
+build
+__pycache__

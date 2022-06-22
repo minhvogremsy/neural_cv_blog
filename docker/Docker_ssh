@@ -1,0 +1,36 @@
+
+FROM ubuntu:18.04
+ENV TZ=Europe/Kiev
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+# Install system packages
+RUN apt-get update && apt-get upgrade && apt-get install -y --no-install-recommends \
+	iputils-ping \
+    mc \
+    nano \
+	openssh-server \
+    openssl \
+    htop && \
+    rm -rf /var/lib/apt/lists/*
+
+    # Minimize image size 
+RUN (apt-get autoremove -y; \
+     apt-get autoclean -y)  
+
+
+RUN echo 'root:1' | chpasswd
+
+RUN sed -i 's/#Port 22/Port 2222/' /etc/ssh/sshd_config
+RUN sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
+
+#RUN service ssh start
+#RUN useradd -rm -d /home/mlx -s /bin/bash -g root -G sudo -u 1001 mlx  -p "$(openssl passwd -1 1)"
+#USER mlx
+#WORKDIR /home/mlx
+
+EXPOSE 2222
+
+#CMD ["bash"]
+#CMD ["/usr/sbin/sshd","-D"]
+
+ENTRYPOINT service ssh start && bash

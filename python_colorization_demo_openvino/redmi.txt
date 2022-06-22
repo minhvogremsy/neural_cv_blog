@@ -1,0 +1,11 @@
+python colorization_demo.py -i 1_crop.avi -m colorization-v2.xml  -o OUt.avi
+python colorization_demo.py -i 4.mp4 -m colorization-v2.xml  -o OUt4.avi
+
+python colorization_demo.py -i 2336_a.avi -m colorization-v2.xml  -o 2336_d.avi
+
+python colorization_demo.py -i 2337.avi -m colorization-v2.xml  -o 2337_d.avi
+
+python colorization_demo.py -i Screenshot_1.png -m colorization-siggraph.xml  -o 2337_d_.avi
+
+
+python colorization_demo.py -i 2338_.avi -m colorization-v2.xml  -o 2338_d.avi

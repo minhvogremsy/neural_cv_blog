@@ -1,0 +1,5 @@
+.vc/
+model/
+cpp/out/
+cpp/.vc/
+cpp/CMakeSettings.json

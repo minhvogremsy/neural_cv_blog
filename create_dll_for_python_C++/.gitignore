@@ -1,0 +1,11 @@
+.vs/
+x64/
+Debug/
+Release/
+MathLibrary/x64/
+MathLibrary/Debug/
+MathLibrary/Release/
+*.vcxproj
+*.filters
+*.user
+MathLibrary.sln

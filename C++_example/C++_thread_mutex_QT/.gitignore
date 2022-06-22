@@ -1,0 +1,11 @@
+.vs/
+out/
+build/
+CMakeSettings.json
+*.cflags
+*.config
+*.creator
+*.user
+*.cxxflags
+*.files
+*.includes
