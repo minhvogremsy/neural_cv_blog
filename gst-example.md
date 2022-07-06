@@ -18,7 +18,9 @@
 -  writer.open("appsrc !  \
      videoconvert ! video/x-raw, format=(string)I420 ! omxh264enc control-rate=2 bitrate=8000000 ! video/x-h264, stream-format=byte-stream ! \
      rtph264pay mtu=1500 ! udpsink host=0.0.0.0 port=5000 sync=false async=false", 0, 30, cv::Size(frame_width, frame_height), true); ***пример  VideoWriter на вход которого можно подовать cv::Mat для трансляции через OpenCV***
+
 - gst-launch-1.0 -v udpsrc port=5000 ! "application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264, payload=(int)96" ! rtph264depay ! h264parse ! decodebin ! videoconvert ! autovideosink sync=false ***проиграть на хосте***
+
  - sudo systemctl restart nvargus-daemon - перезагрузка аргус демона (рекомендуется выполнять если нужно перезапустить камеру)
  - v4l2-ctl -d0 --list-formats-ext 
  - gst-launch-1.0 nvarguscamerasrc sensor_id=0 ! 'video/x-raw(memory:NVMM), width=1920, height=1080, format=(string)NV12, framerate=(fraction)28/1' ! omxh264enc control-rate=2 preset-level=2 bitrate=12000000 ! video/x-h264, stream-format=byte-stream ! rtph264pay mtu=1500 ! udpsink host=0.0.0.0 port=5000 sync=false async=false   ***пример где мы используем gst для стриминга видео***
@@ -29,8 +31,8 @@
   gst-launch-1.0 nvarguscamerasrc sensor_id=0 ! 'video/x-raw(memory:NVMM), width=3264, height=2464, format=(string)NV12, framerate=(fraction)21/1' ! nvv4l2h264enc bitrate=12000000 ! video/x-h264, stream-format=byte-stream ! rtph264pay mtu=1500 ! udpsink host=0.0.0.0 port=5000 sync=false async=false
 
 
-  ### Инструменты для GIT 
-  #### Meld 
+### Инструменты для GIT 
+#### Meld 
  -  http://sourceforge.net/projects/meld-installer/
 
  ```sh
@@ -47,3 +49,5 @@ And that seems to work.  Both merging and diffing with “git difftool” or “
  ```sh
  sudo apt-get install libx11-dev libx11-xcb-dev libxext-dev libxfixes-dev libxi-dev libxrender-dev libxcb1-dev libxcb-glx0-dev libxcb-keysyms1-dev libxcb-image0-dev libxcb-shm0-dev libxcb-icccm4-dev libxcb-sync0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-randr0-dev libxcb-render-util0-dev llibxcb-xinerama0-dev libxkbcommon-dev libxkbcommon-x11-dev
  ```
+ ## Уроки по питон
+ https://github.com/trekhleb/learn-python
