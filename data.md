@@ -38,11 +38,11 @@ loftr_fine
 
 
 #### Стабилизация видео
-- [https://ci-gitlab-30.peleng.by/biaspaltsau_aa/biaspaltsau_aa/-/tree/6155_nano_dev/prj/vpi_stab_cv] различные примеры написанные мной в 7-9.2021 по стабилизации видео на С++. В этом репозитории в папке python_folder/Python_Stabilization_Video лежит базовый пример реализации стабилизации видео.
+- [https://-/tree/6155_nano_dev/prj/vpi_stab_cv] различные примеры написанные мной в 7-9.2021 по стабилизации видео на С++. В этом репозитории в папке python_folder/Python_Stabilization_Video лежит базовый пример реализации стабилизации видео.
 
 #### Обноружение оъектов и адаптация домена
 - https://github.com/Vibashan/online-od код и статья про адаптацию домена (про то как детекторы при выходе за приделы обучающей выборки начинают хуже работать) (12.04.2022, ***кода пока нет***)
-- https://github.com/RangiLyu/nanodet типа детектор который должен быть ***намного быстрее чем yolox (yolov4-tiny)*** 2021 (конец). На 25.05 реализована [https://ci-gitlab-30.peleng.by/6157/neural_detection/-/tree/master/%D0%A1%2B%2B_nanodet] версия на tensorrt. Результат по производительности выше чем у yolov4. Обучение - стандартное (заменить в config файле число классов, добавить свой данные в формате coco, изменить размер партии и число эпох (размер партии уменьшить в 2-4 раза что бы уместиться в 8 гб))
+- https://github.com/RangiLyu/nanodet типа детектор который должен быть ***намного быстрее чем yolox (yolov4-tiny)*** 2021 (конец). На 25.05 реализована [neural_detection/-/tree/master/%D0%A1%2B%2B_nanodet] версия на tensorrt. Результат по производительности выше чем у yolov4. Обучение - стандартное (заменить в config файле число классов, добавить свой данные в формате coco, изменить размер партии и число эпох (размер партии уменьшить в 2-4 раза что бы уместиться в 8 гб))
 - https://github.com/obss/sahi смысл решения в том, что изображение бьется на области квадратной формы, обноружение идет в каждой конкретной области - скорость падает точность возрастает
 - https://github.com/hustvl/YOLOP - YOLOP /
 - https://github.com/HikariTJU/LD что то про дисциляцию при обноружении объектов. Дообучение нейронных сетей после осного цикла обучения. Типа их решение может дать +2% AP. 
@@ -151,8 +151,8 @@ performance evaluation methodology for object tracking . Что то про до
 - https://www.youtube.com/watch?v=N9kN_eSIF9A - конференция по встраиваемым системам 2022
 - https://cvpr2022.thecvf.com/workshop-schedule семинар по компьютерному зрению 2022
 #### Docker
-- https://ci-gitlab-30.peleng.by/devops/support/-/wikis/artifactory/Nexus-Docker-Repository
-- https://ci-artifactory-30.peleng.by/#browse/browse:docker-group
+- devops/support/-/wikis/artifactory/Nexus-Docker-Repository
+- #browse/browse:docker-group
 #### Docker-END
 - https://habr.com/ru/post/486202/ (отличие alpine от ubuntu)
 - https://github.com/QMonkey/wsl-tutorial/blob/master/README.wsl2.md (WSL)
