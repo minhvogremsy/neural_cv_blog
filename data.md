@@ -149,7 +149,7 @@ performance evaluation methodology for object tracking . Что то про до
 
 
 
-# Разные ссылки полученные (переданные) от/- Коревко
+# Разные ссылки полученные (переданные) +/- 
 - https://aerotenna.readme.io/docs/what-is-ocpoc типа автопилот (но очень сырой и еще не вышел)
 - https://github.com/PX4/PX4-Autopilot PX4-Autopilot
 - https://developer.nvidia.com/embedded/jetson-orin
@@ -169,7 +169,7 @@ performance evaluation methodology for object tracking . Что то про до
 - https://shop.variscite.com/product/evaluation-kit/var-som-mx8m-nano-evaluation-kits/ (какой то дашборд)
 - https://www.variscite.com/product/system-on-module-som/cortex-a72/spear-mx8-nxp-imx8/#memory еще какой то дашборд
 - https://www.leopardimaging.com/product/nvidia-jetson-cameras/nvidia-agx-xavier-camera-kits/li-xavier-kit-imx265-x/li-xavier-kit-imx265m12/ решение с 6 камерами
-- https://docs.google.com/spreadsheets/d/1yK24-C_6KQAvyKPNljTASOcTcopBeOGxfun6EnXZEA0/htmlview ПК который мы заказали для нейронных сетей
+
 
 
  # Просто ссылки которые захотелось сохранить
